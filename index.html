@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="http://127.0.0.1:5500/assets/images/LogoMakr-05nrqV.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <title>OTRJS</title>
+</head>
+
+<body>
+    <nav id="theNavbar">
+        <p class="logo"><a href="#header"><img src="./assets/images/LogoMakr-05nrqV.png" alt="" width="150px"></a></p>
+        <button class="hamburger" id="hamburger">
+            ☰
+        </button>
+        <ul id="burger">
+            <li><a class="nav-links" href="#header">Back home</a></li>
+            <li><a class="nav-links" href="#stats">Statistics</a></li>
+            <li><a class="nav-links" href="#reportCarouselContainer">D Reports</a></li>
+            <li><a class="nav-links" href="#js-story">What's JS ?</a></li>
+            <li><a class="nav-links" href="#liens-utiles">Lab Links</a></li>
+            <li><a class="nav-links" href="#theLab">Your Lab</a></li>
+        </ul>
+        <span id="horloge"></span>
+    </nav>
+    <header id="header">
+        <div class="ontheroad">
+            <h1>ON THE ROAD JS</h1>
+            <span id="thebuttons">
+                <button class="btn btn-danger" id="todolistAccess" type="button">
+                    <a href="./todoList/todolist.html" target="blank">Your
+                        todoList
+                    </a>
+                </button>
+                <button class="btn btn-danger" id="giveStats" type="button">GIVE ME STATS</button>
+            </span>
+        </div>
+    </header>
+    <div id="beforYouStart">
+        <button id="buttocks">X</button>
+        <h2>Data for statistics</h2>
+        <div class="enForm">
+            <label for="whatDate">Date Confirmation</label>
+            <div class="inputGroup">
+                <input type="date" id="whatDate" name="whatDate">
+                <button id="validateDate">OK</button>
+            </div>
+
+            <label for="sleepHours">Spleeping Time</label>
+            <div class="inputGroup">
+                <input type="text" id="sleepHours" name="sleepHours">
+                <button id="validateSleepHours">OK</button>
+            </div>
+
+            <label for="howSporSession">Sport Sessions Made</label>
+            <div class="inputGroup">
+                <input type="text" id="howSporSession" name="howSporSession" />
+                <button id="validateSport">OK</button>
+            </div>
+
+            <label for="howVanilla">JS Learning Time</label>
+            <div class="inputGroup">
+                <input type="text" id="howVanilla" name="howVanilla" />
+                <button id="validateVanilla">OK</button>
+            </div>
+
+            <label for="howPython">Python Learning Time</label>
+            <div class="inputGroup">
+                <input type="hidden" id="hiddenFreeCodeId" />
+                <input type="text" id="howPython" name="howPython" />
+                <button id="validatePython">OK</button>
+            </div>
+
+            <label for="howAI">AI Learning Time</label>
+            <div class="inputGroup">
+                <input type="text" id="howAI" class="nbAIHours" name="howAI" />
+                <button id="validateAI">OK</button>
+            </div>
+
+            <label for="howMathematics">Maths Learning Time</label>
+            <div class="inputGroup">
+                <input type="text" id="howMathematics" name="howMathematics" />
+                <button id="validateMathematics">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="stats">
+        <h1><span id="bienvenue"></span>'s Dayly Statistics</h1>
+        <div class="left-right">
+            <div id="statistics">
+                <br>
+                <h2 style="color:#c82333;">DAYLY STATISTICS</h2>
+                <div class="chart-container row">
+                    <canvas id="chart" width="200" height="150"></canvas>
+                </div>
+            </div>
+            <div class="container" id="reports">
+                <h2 style="color:#c82333;">DAYLY REPORTS</h2>
+                <p class="aoasses">
+                    <a href="https://docs.python.org/3/" id="python" target="blank"></a>
+                </p>
+                <div id="cache-python" class="row">
+                    <ul id="ulCacheCache"></ul>
+                </div>
+
+                <p id="AI" class="aoasses"></p>
+                <p class="aoasses"><a href="#liens-utiles" id="JavaScript"></a></p>
+                <p class="aoasses">
+                    <a href="https://www.codewars.com/dashboard" id="mathematics"></a>
+                </p>
+                <p id="sport" class="aoasses"></p>
+                <p id="jours-entrainement" class="aoasses"></p>
+                <p id="sommeil" class="aoasses"></p>
+                <p id="effective" class="aoasses"></p>
+                <span id="totalHoursExercices"> </span>
+            </div>
+        </div>
+    </div>
+    <div id="reportCarouselContainer">
+        <div class="slider" id="reportCarouselInnerBlock">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+
+                <div class="slide first">
+                    <img src="./assets/images/roads/matt-howard-A4iL43vunlY-unsplash.jpg" alt="">
+                    <div class="report">
+                        <h3><span style="color: red;text-shadow: 1px 1px 1px #222;">SPORTS</span> SESSIONS EFFECTIVENESS REPORT</h3>
+                        <p id="sportCont"></p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./assets/images/roads/laimannung-MNmFIAiAQSk-unsplash.jpg" alt="">
+                    <div class="report">
+                        <h3><span style="color: green;text-shadow: 1px 1px 1px #222;">PYTHON</span> LEARNING EFFECTIVENESS REPORT</h3>
+                        <p id="homework"></p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./assets/images/roads/joey-kyber-45FJgZMXCK8-unsplash.jpg" alt="">
+                    <div class="report">
+                        <h3><span style="color: orange;text-shadow: 1px 1px 1px #222;">JAVASCRIPT</span> LEARNING EFFECTIVENESS REPORT</h3>
+                        <p id="javaScriptall"></p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./assets/images/roads/julien-riedel-alGtgU3MQu4-unsplash.jpg" alt="">
+                    <div class="report">
+                        <h3><span style="color: #d4af37;text-shadow: 1px 1px 1px #222;">MATHEMATICS</span> LEARNING EFFECTIVENESS REPORT</h3>
+                        <p id="others"></p>
+                    </div>
+                </div>
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+            </div>
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="histoire_de_JavaScript" id="js-story">
+            <h2 class="titre_histoire">
+                C'EST QUOI &nbsp; JAVASCRIPT &nbsp; ?
+            </h2>
+            <div class="left_right_story">
+                <div class="images_story">
+                    <img src="./assets/images/what-is-js-images/martin-katler-VePKTgUSgH8-unsplash.jpg"
+                        alt="image png histoire"><br>
+                    <img src="./assets/images/what-is-js-images/navigators.jpg" alt="image png histoire">
+                    <img src="./assets/images/what-is-js-images/internet-wars.jpg" alt="image png histoire">
+                </div>
+                <div class="writtings">
+                    <p>
+                        <span class="writtings-title">A QUOI CA SERT ?</span><br>
+                        <span class="writtings-text">
+                            Le JavaScript permet de dynamiser la page d'un site web en iteragissant avec le DOM.
+                            L'affichage du html sur une page est possible grâce au DOM, et le DOM, n'est rien d'autre
+                            qu'un
+                            arbre.
+                            Ce que va faire le JavaScript c'est chercher un élément du DOM HTML,
+                            grâce à un ID, une Classe, une Balise etc. Et il va changer le contenu du texte à
+                            l'intérieur
+                            ou le récupérer pour l'utiliser dans des variables, boucles ou fonctions...
+                        </span>
+                        <br><br>
+
+                        <span class="writtings-title">POUR LA PETITE HISTOIRE</span><br>
+                        <span class="writtings-text">
+                            Aujourd'hui, Les navigateurs possèdent un moteur JavaScript qui interprête le JS, afin de
+                            comprendre ce langage. Ce qui permet à JavaScript d'être exécuté et d'avoir un avantage
+                            certain
+                            sur les autres langages
+                        </span>
+                        <br><br>
+
+                        <span class="writtings-title">
+                            COMMENT S'EST-IL IMPOSE COMME LE LANGAGE DE PROGRAMMATION POUR LE WEB ?
+                        </span><br>
+                        <span class="writtings-text">
+                            Ce langage a été "créé en 10 Jours" en 1995 par "Brendan Eich", pour le compte de
+                            "NetScape",
+                            qui
+                            intègre alors un moteur JavaScript dans son navigateur.
+                            A cette époque NetScape devient le navigateur dominant sur le marché 90% de PM.<br>
+                            Microsoft alors très penché sur son système d'exploitation windows 95, vu NetScape comme
+                            une menace.
+                            Il créa donc "Internet Explorer", son concurrent qui lui utilisait un langage de
+                            programmation
+                            appelé "JScript".
+                        </span>
+                        <br><br>
+
+                        <span class="writtings-title">LA GUERRE DES NAVIGATEUR</span><br>
+                        <span class="writtings-text">
+                            Microsoft utilisa sa domination financière et son monopole sur les systèmes d'exploitation
+                            pour imposer Internet Explorer.
+                            En rendant gratuits des services que NetScape faisait payer, ou en interdisant la
+                            pré-installation
+                            de NetScape sur le bureau Windows. En 1998, Internet Explorer qui nous a pas mal fait vomir
+                            ces
+                            dernières années défonce NetScape et reprend ainsi ses 90PM.
+                        </span>
+                        <br><br>
+
+                        <span class="writtings-title">ET APRES LA GUERRE ?</span><br>
+                        <span class="writtings-text">
+                            Après cette guerre, Microsoft ne s'investit plus dans le développement de son navigateur. Il
+                            n'y a pas eu de version entre 2001 et 2006. Par exemple, avant 2006, IE n'avait pas de
+                            système
+                            de navigation par onglets, ou encore, une case moteur de recherche placé à droite de la
+                            barre
+                            de navigation. Ainsi, des solutions alternatives à IE voient le jour => Mozilla(2004) et
+                            Chrome(2008), et tous deux intègrent JavaScript dans leur navigateur.
+                            Et aux vues des mauvaises performances d' IE, Chrome réussit à s'imposer sur le marché des
+                            navigateurs.
+                        </span>
+                        <br><br>
+
+                        <span class="writtings-title">FINALEMENT ?</span><br>
+                        <span class="writtings-text">
+                            JavaScript s'est imposé dans le développement web côté client. Et cela ne cesse de gagner en
+                            puissance, car il est utilisé pour développer de nombreuses bibliothèques ou frameworks pour
+                            le
+                            Front-End, tels que : "React, Angular, Vue JS". Utilisé aussi en dehors du navigateur grâce
+                            à
+                            notamment Node JS pour la partie Back-End.
+                        </span>
+                        <br>
+                        <br>
+
+                        <span class="writtings-title">LES VERSIONNINGS DU JAVASCRIPT ?</span><br>
+                        <span class="writtings-text">
+                            En 1997, JavaScript à été soumis au standard ECMASCRIPT, et depuis il a connu de
+                            nombreux versionnings. C'est pourquoi on l'appelle aussi ES (EcmaScript).
+                            En 2016, il connait sa plus grande révolution avec de nombreuses nouvelles
+                            fonctionnalités. La 6 ème version de EcmaScript est appelée ES6 ou ES2015, car
+                            lancée en 2016. Et depuis ES7 et ES8 ont vu le jour, et ES9 devrait bientôt sortir.
+                        </span>
+                        <br>
+                        <br>
+
+
+                        <span class="writtings-title">LES NAVIGATEURS ET LES TRANSPILERS ?</span><br>
+                        <span class="writtings-text">
+                            Les nouvelles versions des "navigateurs" ne sont pas aussi rapides que les nouvelles
+                            versions de "JavaScript", et ne supportent donc pas toutes les nouvelles fonctionnalités
+                            c'est pourquoi depuis "ES6", il faut traduire les nouvelles versions en des versions
+                            antérieures notamment "ES5". Pour cela, on utilise des "transpilers". Ces transpilers
+                            transpilent le code avant d'être envoyé aux navigateurs pour que ce dernier puisse
+                            interprèter le JavaScript. Parmis ces transpilers, il existe Babel.
+                        </span>
+                        <br>
+                        <br>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div id="liens-utiles">
+            <h1 class="les-liens">
+                Tableau d'études <span id="totalJsBasicsHours"> </span>
+            </h1>
+            <div id="stocked" class="row bounce-in-right" style="display: none;">
+            </div>
+            <div class=" finishedandsaved">
+                <button id="save-button" class="btn">Sauvegarde cours terminés</button>
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="finishing">
+                        Voir cours terminés
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="les-dropdowns">
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        1.JavaScript Closures
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=icBf4wZcOLQ">
+                                1. La portée en JavaScript
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=5XYawGYYl-I">
+                                1. Les closures en JavaScript
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=3a0I8ICR1Vg">
+                                1. JS Closures 2
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        2. JS Hoisting
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=cHyydUnsaWI">
+                                2. JS Hoisting var, let, const
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=dqnXG0Ik6Ls">
+                                2. JS Hoisting
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        3. JavaScript manipulate the DOM
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=EHF7xBUAmrQ">
+                                3. JavaScript DOM Exercises 1, 2, 3
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=5jfjMg4sstg">
+                                3. JavaScript DOM Exercises 4
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=kLX3t1aV1As">
+                                3. JavaScript DOM Exercises 5
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=yehTgRM3jl0">
+                                3. JavaScript DOM Exercises 6
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=_TLmWaaJPV4">
+                                3. Le DOM JavaScript
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=gHD7FOONV2o">
+                                3. Manipuler le DOM en JavaScript
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        4. JavaScript Loops
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item"
+                                href="https://www.youtube.com/watch?v=Kn06785pkJg&t=52s">
+                                4. Loops made easy
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=KoeSseqKKro">
+                                4. Objects loops
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=S-n9OB4SkWg">
+                                4. Event loops
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        5. JavaScript Arrays
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=Lf9rG5DsQYg">
+                                5. Create, access, and loop through arrays
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=SXb5LN_opbA">
+                                5. Array forEach()
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=RsFBsBep-hA">
+                                5. Array sort()
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=FFas8cMHVwg">
+                                5. Array splice()
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=t6ErSbYzguw">
+                                5. Array fill()
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=PHgeshcXtDc">
+                                5. Array concat()
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=JfZv9QNSpi4">
+                                5. Array slice()
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=d3TJbWvfSgw">
+                                5. Array flat()
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=0fBiseAGQIc">
+                                5. Json Array to HTML table
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=tFz502-LXU8">
+                                5. JavaScript Array methods exercices
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        6. JavaScript Spread Operator
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=pYI-UuZVtHI">
+                                6. JS Walkthrough Spread Operator
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=LpJBFh0OHFc">
+                                6. Rest and Spread Operator
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        7. JS IIFE
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=bfsT4oTKHCY">
+                                7. JS IIFE 3
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=MbgMlReIhJk">
+                                7. JS IIFE 2
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=lbvnps_9FgU">
+                                7. JS IIFE Tutorial
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        8. JS Dates-hours
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=4dai-I2GzUs">
+                                8. JavaScript Gestion du temps
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=dbfyW99VTKo">
+                                8. Moments.js gérer les dates
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        9. JavaScript Arrow functions
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item"
+                                href="https://www.youtube.com/watch?v=thXp0_py9X4&t=8s">
+                                9. JS ES6 Arrow Functions
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=NAN7U3MrX6o">
+                                9. ES 6 Arrow Functions 2
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        10. JavaScript Recursive Functions
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=NwWys-Yt9H0">
+                                10. JavaScript Recursive Functions
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=WbwP4w6TpCk">
+                                10. Memoization & Dynamic Programming
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        11. JavaScript Factory Functions
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=3HU5l3P6KDc">
+                                11. Les factory functions en JavaScript
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=OjAwnwZNDg0">
+                                11. JavaScipt Factory Function ?
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        12. JavaScript Higher Order Functions
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=HpRmkvM2lKI">
+                                12. JS HOF
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=V3EU0GCbilY">
+                                12. JS Higher Order
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=K00raPOMdPI">
+                                High Order Function 2
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=OTeLIrQhBgE">
+                                12. Introduction to High Order Function
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=W6OYjJuAg_0">
+                                12. Javascript destructuring
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=s5QZIhooG0U">
+                                12. Javascript destructuring 2
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        13. JavaScript Functional Programming
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=UA7JdE7Z28I">
+                                13. Aide programmation fonctionnelle
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=fYbhD_KMCOg">
+                                13. Learn Pure Functions
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=aoE-92Ac4zE">
+                                13. Functional, Procedural & OOP
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        14. JavaScript OOP
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=e--K9kCz-v0">
+                                14. OOP explained exercices
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=nnwD5Lwwqdo">
+                                14. JS composition vs inheritance
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=_Ilj_unoqvA">
+                                14. Javascript classes et prototypes
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=LpEVVdZu2VA">
+                                14. JS le POO ES6
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        15. JavaScript This and New Keyword
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item"
+                                href="https://www.youtube.com/watch?v=Pi3QC_fVaD0&t=18s">
+                                15. JS This Keyword
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item"
+                                href="https://www.youtube.com/watch?v=YOlr79NaAtQ&t=20s">
+                                15. JS This Keyword 2
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=Om9TZ1wc2bw">
+                                15. JS The New Operator
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=XviRIb9BMpI">
+                                15. JS Bind and This
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        16. JavaScript Json
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=s6OIOL9OMYA">
+                                16. Learn Json in 10 minutes
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=h34Dbdl9twc">
+                                16. Utiliser Json Parse
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=ff4fgQxPaO0">
+                                16. Faster Apps with Json (just watch)
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        17. Asynchronous JavaScript
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=-nvhgiZwv1M">
+                                17. Asynchronous JS
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=KP_WWpztros">
+                                17. Asynchronous JS and XML
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=rJesac0_Ftw">
+                                17. Json and Ajax "with examples"
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=V_Kr9OSfDeU">
+                                17. JavaScript Async Await
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item"
+                                href="https://www.youtube.com/watch?v=_8gHHBlbziw&t=1086s">
+                                17. Async JavaScript (callbacks, Promises...)
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=g3SyrS0wgvU">
+                                17. JS Promises
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=djCuFrLLjVk">
+                                17. Fetch API explained
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=4K33w-0-p2c">
+                                17. JS Http Requests
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=oG6VWCDK-Ns">
+                                17. Filtre Produit Ajax (exercice)
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        18. JavaScript Events
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=jqU3uaRgQyQ">
+                                18. Event Listeners
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=Up5Jht8v9BU">
+                                18. Mouse events
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        19. JS Storages
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item"
+                                href="https://www.youtube.com/watch?v=ITmKqkmHlnY&t=544s">
+                                19. Local storage & Session storage
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=gRY0EeA_Xps">
+                                19. JS stockage local et de session
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=GihQAC1I39Q">
+                                19. JavaScript Cookies & Local storage
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        20. JS Form validation
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=rsd4FNGTRBw">
+                                20. JS Client-Side Form Validation
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=qApvlN8Tai0">
+                                20. JS Typing Form Validation
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=lCibUKF1NI8">
+                                20. JS Form Validation How To
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        21. JS Miscellaneous
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=cRHQNNcYf6s">
+                                21. JS ES6 Modules
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=q7z4_0Keo5E">
+                                21. JS Problem Solving
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=ksXwaWHCW6k">
+                                21. JS Service Workers & Caching
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item"
+                                href="https://www.youtube.com/results?search_query=javascript+webpack+and+babel&sp=EgIIBQ%253D%253D">
+                                21. JS WebPack & Babel
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        22. JavaScript Exercices
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item"
+                                href="https://www.youtube.com/watch?v=N65RvNkZFGE&list=PLpc_YvcwbxaSn6jn0VaTcG8A0Grgs1GSB&index=1">
+                                22. Javascript Beginner exercices (5)
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=AKmoccuRiN4">
+                                22. Page animation with JavaScript
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=1dJT-99KpiI">
+                                22. Page Transition with JavaScript
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=aMucZErEdZg">
+                                22. Sick Page Transition with JavaScript
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=DFUtrSsIIiI">
+                                22. Build a Snap Effect
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=Ttf3CEsEwMQ">
+                                22. beginner JavaScript todolist
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=j59qQ7YWLxw">
+                                22. Build a calculator
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=Y-GkMjUZsmM">
+                                22. Build a tic tac toe
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=EdDpBDFFxxw">
+                                22. Micro Interactions validate password
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=lq7tFgvdf4k">
+                                22. Build a voice recognition
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=TdvqNEuvaJU">
+                                22. Build an amazing ChatBot
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item"
+                                href="https://www.youtube.com/watch?v=CVClHLwv-4I&t=238s">
+                                22. Face recognition
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=AZ4PdALMqx0">
+                                22. Face recognition on images
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=h_Dj_gVXao4">
+                                22. Build realtime face reco
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=s66w28knp80">
+                                22. Build a hand detection
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=Hl_vDqaIF3I">
+                                22. Brain.js Machine Learning
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=e1KJ47tyCso">
+                                22. Build a command line utility
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item"
+                                href="https://www.youtube.com/watch?v=qj2oDkvc4dQ&list=PLZlA0Gpn_vH8jbFkBjOuFjhxANC63OmXM&index=5">
+                                22. Project Setup Node, Express, Mongo DB
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item"
+                                href="https://www.youtube.com/watch?v=9M4XKi25I2M&list=PL_c9BZzLwBRLVh9OdCBYFEql6esA6aRsi&index=1">
+                                22. JS Programming All in One
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        23. JS Coding like a Pro
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=g2nMKzhkvxw">
+                                23. JS Junior Vs Senior Code
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=5B587bQ-TNg">
+                                23. JS Junior Vs Senior Code 2
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=RMN_bkZ1KM0">
+                                23. JavaScript Best Practices
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=_n8x8MhQo1k">
+                                23. 5 most used JavaScript Tricks
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        24. JS 3D
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=1TeMXIWRrqE">
+                                24. Add 3D Model to Website
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=6oFvqLfRnsU">
+                                24. Three.js
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=tsMHONmUkvI">
+                                24. Create 3D animation with JS
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                        <div class="radio-links">
+                            <a target="_blank" class="dropdown-item" href="https://www.youtube.com/watch?v=Bed1z7f1EI4">
+                                24. 3D Space Warp
+                            </a>
+                            <input type="checkbox" name="my-checkbox" id="my-checkbox" class="my-checkbox">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <div class="theLab" id="theLab">
+        <h1 class="theLabTitle">Welcome to Your Lab</h1>
+        <div class="dropdown" id="theLabMenu">
+            <button type="button" class="btn" data-toggle="dropdown" id="theLabButton">Link
+                To...</button>
+            <div class="dropdown-menu" id="theDropdowLabMenu">
+                <a href="#theVariables" class="dropdown-item">The Variables</a>
+                <a href="#theLoops" class="dropdown-item">The Loops</a>
+                <a href="#theDOM" class="dropdown-item">The Dom</a>
+                <a href="#theArrays" class="dropdown-item">The Arrays</a>
+                <a href="#theFunctions" class="dropdown-item">The Functions</a>
+                <a href="#theOOP" class="dropdown-item">The OOP</a>
+                <a href="#theEvents" class="dropdown-item">The Events</a>
+                <a href="#theAsynchronousJs" class="dropdown-item">The Asynchronous JS</a>
+                <a href="#theHighOrderFunctions" class="dropdown-item">The High Order Functions</a>
+                <a href="#functionnalProgramming" class="dropdown-item">Functionnal Programming</a>
+            </div>
+        </div>
+        <div id="theLabContent">
+            <div class="eachLabDiv" id="theVariables">
+                <h3 class="ExercicesH3">
+                    <img src="./assets/images/theLabImages/ui (1).png" alt="" width="30" height="30"
+                        style="margin-bottom: 10px;" />
+                    The Variables
+                </h3>
+            </div>
+            <div class="eachLabDiv" id="theLoops">
+                <h3 class="ExercicesH3">
+                    <img src="./assets/images/theLabImages/gear.png" alt="" width="30" height="30"
+                        style="margin-bottom: 10px;" />
+                    The Loops
+                </h3>
+            </div>
+            <div class="eachLabDiv" id="theDOM">
+                <h3 class="ExercicesH3">
+                    <img src="./assets/images/theLabImages/wall.png" alt="" width="30" height="30"
+                        style="margin-bottom: 10px;" />
+                    The DOM
+                </h3>
+            </div>
+            <div class="eachLabDiv" id="theArrays">
+                <h3 class="ExercicesH3">
+                    <img src="./assets/images/theLabImages/trolley.png" alt="" width="30" height="30"
+                        style="margin-bottom: 10px;" />
+                    The Arrays
+                </h3>
+            </div>
+            <div class="eachLabDiv" id="theFunctions">
+                <h3 class="ExercicesH3">
+                    <img src="./assets/images/theLabImages/variability.png" alt="" width="30" height="30"
+                        style="margin-bottom: 10px;" />
+                    The Functions
+                </h3>
+            </div>
+            <div class="eachLabDiv" id="theOOP">
+                <h3 class="ExercicesH3">
+                    <img src="./assets/images/theLabImages/obj.png" alt="" width="30" height="30"
+                        style="margin-bottom: 10px;" />
+                    The OOP
+                </h3>
+            </div>
+            <div class="eachLabDiv" id="theEvents">
+                <h3 class="ExercicesH3">
+                    <img src="./assets/images/theLabImages/calendrier.png" alt="" width="30" height="30"
+                        style="margin-bottom: 10px;" />
+                    The Events
+                </h3>
+            </div>
+            <div class="eachLabDiv" id="theAsynchronousJs">
+                <h3 class="ExercicesH3">
+                    <img src="./assets/images/theLabImages/synchronisation.png" alt="" width="30" height="30"
+                        style="margin-bottom: 10px;" />
+                    The Asynchronous JS
+                </h3>
+            </div>
+            <div class="eachLabDiv" id="theHighOrderFunctions">
+                <h3 class="ExercicesH3">
+                    <img src="./assets/images/theLabImages/variability.png" alt="" width="30" height="30"
+                        style="margin-bottom: 10px;" />
+                    The High Order Functions
+                </h3>
+            </div>
+            <div class="eachLabDiv" id="functionnalProgramming">
+                <h3 class="ExercicesH3">
+                    <img src="./assets/images/theLabImages/variability.png" alt="" width="30" height="30"
+                        style="margin-bottom: 10px;" />
+                    The Functional programming
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+
+    <!-- Jquery,  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+
+    <!-- All my Own JS files -->
+    <script src="./assets/js/yourLab.js"></script>
+    <script src="./assets/js/welcome.js"></script>
+    <script src="./assets/js/navbar.js"></script>
+    <script src="./assets/js/getStats.js"></script>
+    <script src="./assets/js/smoothScroll.js"></script>
+    <script src="./assets/js/date_hours.js"></script>
+
+    <!-- Charts.js and DataAOS.js files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
